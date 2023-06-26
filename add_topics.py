@@ -7,7 +7,6 @@ import os
 gh_base_url = "https://api.github.com/"
 # gh_base_url = "https://api.github.com/lopezjoa/TopicTest/tree/main"
 
-gh_repos_url = gh_base_url + "orgs/United-Airlines-Org/repos"
 gh_add_topics_url = gh_base_url + "repos/lopezjoa/"
 
 session = requests.Session()
