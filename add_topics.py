@@ -35,10 +35,10 @@ def open_file(path):
 def get_user_input(repos_dict):
     target_repo = input("Enter the target repo: ")
     topics = []
-
+# Add multiple topics to one repo instead of one
     if target_repo in repos_dict:
         while True:
-            topic = input("Enter a topic (press Enter to finish): ")
+            topic = input("Enter a topic (press Enter to finish): ").split(', ')
             if topic == "":
                 break
             topics.append(topic)
@@ -72,7 +72,7 @@ def add_topics(repo, new_topics, existing_topics, repo_owner):
     for topic in new_topics:
         existing_topics.add(topic)
 
-    existing_topics = list(existing_topics)
+    existing_topics = list(existing_topics) # converting set back into a list
     if len(existing_topics) > 0:
         data = {
             "names": existing_topics
@@ -91,7 +91,7 @@ def test_obtained(target_repo):
 
 if __name__ == "__main__":
     # MODIFY THIS SO IT READS FROM LATEST REPO DATA WITH TOPICS PULLED
-    repo_dict = open_file("cloud_data.json")
+    repo_dict = open_file("C:\Users\jlopez201\VS Code\cloud_data.json")
 
     target_repo, topics = get_repo_and_topics_from_args(repo_dict)
     # target_repo, topics = get_user_input(repo_dict)
