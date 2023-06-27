@@ -4,10 +4,11 @@ import sys
 import os
 
 
-gh_base_url = "https://api.github.com/"
-# gh_base_url = "https://api.github.com/lopezjoa/TopicTest/tree/main"
 
+gh_base_url = "https://api.github.com/"
+gh_repos_url = gh_base_url + "users/lopezjoa/repos"
 gh_add_topics_url = gh_base_url + "repos/lopezjoa/"
+gh_contributors_url = gh_base_url + "repos/lopezjoa/"
 
 session = requests.Session()
 token = os.getenv("JL_PAT")
