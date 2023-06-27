@@ -91,7 +91,7 @@ def test_obtained(target_repo):
 
 if __name__ == "__main__":
     # MODIFY THIS SO IT READS FROM LATEST REPO DATA WITH TOPICS PULLED
-    repo_dict = open_file("C:\Users\jlopez201\VS Code\cloud_data.json")
+    repo_dict = open_file(cloud_data.json")
 
     target_repo, topics = get_repo_and_topics_from_args(repo_dict)
     # target_repo, topics = get_user_input(repo_dict)
