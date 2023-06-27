@@ -4,13 +4,11 @@ import time
 import os
 
 gh_base_url = "https://api.github.com/"
-# gh_base_url = "https://api.github.com/lopezjoa/TopicTest/tree/main"
-
-gh_repos_url = gh_base_url + "repos/lopezjoa/repos"
-gh_langs_url = "repos/lopezjoa/"
+gh_repos_url = gh_base_url + "orgs/United-Airlines-Org/repos"
+gh_langs_url = gh_base_url + "repos/United-Airlines-Org/"
 
 session = requests.Session()
-token = os.getenv("JL_PAT")
+token = os.getenv("NEW_PL_PAT_CLOUD")
 
 access = "Bearer " + token
 headers = { "Accept": "application/vnd.github+json", "Authorization": access }
@@ -32,9 +30,9 @@ def printToFile(data):
     data_pp = json.dumps(data, indent=2)
 
     directory = os.getcwd()
-    # filepath = directory + "/Data-Imports/GitHub/Outputs/"
+    filepath = directory + "/Data-Imports/GitHub/Outputs/"
     # Will write to /gh-repo/scannability/inputs/ for our scannability analysis
-    f = open("repos-output.json", "w")
+    f = open(filepath+"cloud-repo-output_OLD.json", "w")
     f.write(data_pp)
     f.close()
 
