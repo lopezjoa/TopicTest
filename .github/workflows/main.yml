@@ -25,15 +25,15 @@ jobs:
         run: |
           git config --global user.email "lopezjoa@iu.edu"
           git config --global user.name "lopezjoa"
-      - name: Getting Github Cloud Data OLD
-        env:
-          JL_PAT: ${{ secrets.JL_PAT}}
-        run: |
-          git status
-          python import_cloud_old.py
-          git add .
-          git commit -m "Got list of repos"
-          git push
+#       - name: Getting Github Cloud Data OLD
+#         env:
+#           JL_PAT: ${{ secrets.JL_PAT}}
+#         run: |
+#           git status
+#           python import_cloud_old.py
+#           git add .
+#           git commit -m "Got list of repos"
+#           git push
       - name: Running Topic Script
         env:
           JL_PAT: ${{ secrets.JL_PAT}}
