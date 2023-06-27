@@ -1,0 +1,202 @@
+[
+  {
+    "name": "anotherRepo",
+    "contributors": [
+      {
+        "login": "lopezjoa",
+        "id": 137831857,
+        "node_id": "U_kgDOCDclsQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lopezjoa",
+        "html_url": "https://github.com/lopezjoa",
+        "followers_url": "https://api.github.com/users/lopezjoa/followers",
+        "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+        "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+        "repos_url": "https://api.github.com/users/lopezjoa/repos",
+        "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 1
+      }
+    ],
+    "topics": {
+      "names": []
+    },
+    "owner": {
+      "login": "lopezjoa",
+      "id": 137831857,
+      "node_id": "U_kgDOCDclsQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lopezjoa",
+      "html_url": "https://github.com/lopezjoa",
+      "followers_url": "https://api.github.com/users/lopezjoa/followers",
+      "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+      "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+      "repos_url": "https://api.github.com/users/lopezjoa/repos",
+      "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "environment": "GitHub Cloud"
+  },
+  {
+    "name": "fail_example",
+    "contributors": [
+      {
+        "login": "lopezjoa",
+        "id": 137831857,
+        "node_id": "U_kgDOCDclsQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lopezjoa",
+        "html_url": "https://github.com/lopezjoa",
+        "followers_url": "https://api.github.com/users/lopezjoa/followers",
+        "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+        "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+        "repos_url": "https://api.github.com/users/lopezjoa/repos",
+        "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 1
+      }
+    ],
+    "topics": {
+      "names": []
+    },
+    "owner": {
+      "login": "lopezjoa",
+      "id": 137831857,
+      "node_id": "U_kgDOCDclsQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lopezjoa",
+      "html_url": "https://github.com/lopezjoa",
+      "followers_url": "https://api.github.com/users/lopezjoa/followers",
+      "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+      "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+      "repos_url": "https://api.github.com/users/lopezjoa/repos",
+      "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "environment": "GitHub Cloud"
+  },
+  {
+    "name": "myRepo",
+    "contributors": [
+      {
+        "login": "lopezjoa",
+        "id": 137831857,
+        "node_id": "U_kgDOCDclsQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lopezjoa",
+        "html_url": "https://github.com/lopezjoa",
+        "followers_url": "https://api.github.com/users/lopezjoa/followers",
+        "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+        "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+        "repos_url": "https://api.github.com/users/lopezjoa/repos",
+        "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 1
+      }
+    ],
+    "topics": {
+      "names": []
+    },
+    "owner": {
+      "login": "lopezjoa",
+      "id": 137831857,
+      "node_id": "U_kgDOCDclsQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lopezjoa",
+      "html_url": "https://github.com/lopezjoa",
+      "followers_url": "https://api.github.com/users/lopezjoa/followers",
+      "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+      "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+      "repos_url": "https://api.github.com/users/lopezjoa/repos",
+      "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "environment": "GitHub Cloud"
+  },
+  {
+    "name": "otherRepo",
+    "contributors": [
+      {
+        "login": "lopezjoa",
+        "id": 137831857,
+        "node_id": "U_kgDOCDclsQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lopezjoa",
+        "html_url": "https://github.com/lopezjoa",
+        "followers_url": "https://api.github.com/users/lopezjoa/followers",
+        "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+        "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+        "repos_url": "https://api.github.com/users/lopezjoa/repos",
+        "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 1
+      }
+    ],
+    "topics": {
+      "names": []
+    },
+    "owner": {
+      "login": "lopezjoa",
+      "id": 137831857,
+      "node_id": "U_kgDOCDclsQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/137831857?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lopezjoa",
+      "html_url": "https://github.com/lopezjoa",
+      "followers_url": "https://api.github.com/users/lopezjoa/followers",
+      "following_url": "https://api.github.com/users/lopezjoa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lopezjoa/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lopezjoa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lopezjoa/subscriptions",
+      "organizations_url": "https://api.github.com/users/lopezjoa/orgs",
+      "repos_url": "https://api.github.com/users/lopezjoa/repos",
+      "events_url": "https://api.github.com/users/lopezjoa/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lopezjoa/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "environment": "GitHub Cloud"
+  }
+]
