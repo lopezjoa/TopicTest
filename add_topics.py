@@ -26,7 +26,7 @@ def open_file(path):
         name = entry["name"]
 
         owner = entry["owner"]["login"]  # owner is a dict
-        topics = entry["topics"].split(', ') if isinstance(entry["topics"], str) else entry["topics"]
+        topics = entry["topics"]
         repo_dict[name] = (owner, topics)
     
     return repo_dict
@@ -70,16 +70,15 @@ def get_repo_and_topics_from_args(repos_dict):
         repo_name[repo_key] = []
         if repo_key in repos_dict:  # check if repo_key exists as a key in repos_dict
             for topic in i_list:
-                if topic != "":  # check if the topic is not empty
-                    repos_dict[repo_key][1].append(topic) # add topics to repo name dictionary if it's in repo dictionary
-                    print("Topics: ", repos_dict[repo_key][1])
+                if topic:  # check if the topic is not empty
+                    repo_name[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
+                    print("Topics: ", repo_name[repo_key])
                 else:
                     print("Error: At least one topic must be provided.")
                     sys.exit(1)
         else:
-            print("Error: Repo not found.")
-            sys.exit(1)
-    return repos_dict
+            return repo_name
+    return repo_name
 
 
 def add_topics(repo, new_topics, existing_topics, repo_owner):
