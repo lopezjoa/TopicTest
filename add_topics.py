@@ -26,7 +26,7 @@ def open_file(path):
         name = entry["name"]
 
         owner = entry["owner"]["login"]  # owner is a dict
-        topics = entry["topics"]
+        topics = entry["topics"].split(', ') if isinstance(entry["topics"], str) else entry["topics"]
         repo_dict[name] = (owner, topics)
     
     return repo_dict
