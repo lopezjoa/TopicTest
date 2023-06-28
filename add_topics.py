@@ -115,7 +115,7 @@ if __name__ == "__main__":
             print(topics)
             print(f"repo_dict: {repo_dict}")
             print(f"target_repo: {target_repo}")
-            existing_topics = existing_repo_dict[target_repo]["topics"]  # returns existing topics
+            existing_topics = existing_repo_dict[target_repo][1]  # returns existing topics
             
             repo_owner = repo_dict[target_repo][0]
             add_topics_resp = add_topics(target_repo, topics, existing_topics, repo_owner)
