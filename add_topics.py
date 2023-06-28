@@ -70,7 +70,7 @@ def get_repo_and_topics_from_args(repos_dict):
         repo_name[repo_key] = []
         if repo_key in repos_dict:  # check if repo_key exists as a key in repos_dict
             for topic in i_list:
-                if topic =! " ":  # check if the topic is not empty
+                if topic != "":  # check if the topic is not empty
                     repos_dict[repo_key][.append(topic) # add topics to repo name dictionary if it's in repo dictionary
                     print("Topics: ", repos_dict[repo_key][1])
                 else:
