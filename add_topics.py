@@ -62,7 +62,7 @@ def get_repo_and_topics_from_args(repos_dict):
     repo_name = {}  # where we store repos and their topics
     for i in args_list:
         print("i ", i)
-        i_list = i.split(" ")  # split string into list by ,
+        i_list = i.split(",")  # split string into list by ,
         i_list = [element.strip() for element in i_list]  # strip spaces
         print("i list: ", i_list)
         repo_key = i_list.pop(0)  # store the first value of i_list
