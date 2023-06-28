@@ -117,7 +117,7 @@ if __name__ == "__main__":
             existing_topics = repo_dict[target_repo][1]  # returns existing topics
             
             repo_owner = repo_dict[target_repo][0]
-            add_topics_resp = add_topics(target_repo, topics, existing_topics['names'], repo_owner)
+            add_topics_resp = add_topics(target_repo, topics, existing_topics, repo_owner)
             print("Attempted adding topics, resp code: ")
             print(add_topics_resp)
             
