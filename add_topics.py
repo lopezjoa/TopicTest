@@ -59,7 +59,7 @@ def get_repo_and_topics_from_args(repos_dict):
     args_list = arg.split("]")  # use ) as a delimiter for each repository
     args_list = [element.strip() for element in args_list if element.strip()]  # strip spaces and filter any empty strings
     print("printing arg after split", args_list)
-    repo_name = {}  # where we store repos and their topics
+    repo_dict = {}  # where we store repos and their topics
     for i in args_list:
         print("i ", i)
         i_list = i.split(",")  # split string into list by ,
@@ -67,18 +67,18 @@ def get_repo_and_topics_from_args(repos_dict):
         print("i list: ", i_list)
         repo_key = i_list.pop(0)  # store the first value of i_list
         print("Repo Name: " + repo_key)
-        repo_name[repo_key] = []
+        repo_dict[repo_key] = []
         if repo_key in repos_dict:  # check if repo_key exists as a key in repos_dict
             for topic in i_list:
                 if topic:  # check if the topic is not empty
-                    repo_name[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
-                    print("Topics: ", repo_name[repo_key])
+                    repo_dict[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
+                    print("Topics: ", repo_dict[repo_key])
                 else:
                     print("Error: At least one topic must be provided.")
                     sys.exit(1)
         else:
-            return repo_name
-    return repo_name
+            return repo_dict
+    return repo_dict
 
 
 def add_topics(repo, new_topics, existing_topics, repo_owner):
@@ -105,9 +105,9 @@ def test_obtained(target_repo):
 
 if __name__ == "__main__":
     # MODIFY THIS SO IT READS FROM LATEST REPO DATA WITH TOPICS PULLED
-    repo_dict = open_file("cloud_data.json")
+    existing_repo_dict = open_file("cloud_data.json")
 
-    repo_dict = get_repo_and_topics_from_args(repo_dict)
+    repo_dict = get_repo_and_topics_from_args(existing_repo_dict)
     # target_repo, topics = get_user_input(repo_dict)
     for target_repo, topics in repo_dict.items():
         if target_repo != -1:
@@ -115,7 +115,7 @@ if __name__ == "__main__":
             print(topics)
             print(f"repo_dict: {repo_dict}")
             print(f"target_repo: {target_repo}")
-            existing_topics = repo_dict[target_repo][1]  # returns existing topics
+            existing_topics = existing_repo_dict[target_repo][1]  # returns existing topics
             
             repo_owner = repo_dict[target_repo][0]
             add_topics_resp = add_topics(target_repo, topics, existing_topics, repo_owner)
@@ -134,22 +134,22 @@ if __name__ == "__main__":
         print(repo_dict)
     
         
-    while True:
-        target_repo, topics = get_user_input(repo_dict)
+    # while True:
+    #     target_repo, topics = get_user_input(repo_dict)
 
-        if target_repo != -1:
-            print("You wish to add the following topics to: ", target_repo)
-            print(topics)
-            choice = input("Do you wish to proceed? (Y/N)")
-            if choice == "Y":
-                existing_topics = repo_dict[target_repo][1]  # returns existing topics
-                repo_owner = repo_dict[target_repo][0]
-                add_topics(target_repo, topics, repo_dict, existing_topics, repo_owner)
-            else:
-                cancel = input("Restarting. Enter 'quit' to abort program.")
-                if cancel == "quit":
-                    break
-        else:
-            cancel = input("Repo could not be found, please enter 'quit' to abort or press anything else to continue.")
-            if cancel == "quit":
-                    break
+    #     if target_repo != -1:
+    #         print("You wish to add the following topics to: ", target_repo)
+    #         print(topics)
+    #         choice = input("Do you wish to proceed? (Y/N)")
+    #         if choice == "Y":
+    #             existing_topics = repo_dict[target_repo][1]  # returns existing topics
+    #             repo_owner = repo_dict[target_repo][0]
+    #             add_topics(target_repo, topics, repo_dict, existing_topics, repo_owner)
+    #         else:
+    #             cancel = input("Restarting. Enter 'quit' to abort program.")
+    #             if cancel == "quit":
+    #                 break
+    #     else:
+    #         cancel = input("Repo could not be found, please enter 'quit' to abort or press anything else to continue.")
+    #         if cancel == "quit":
+    #                 break
