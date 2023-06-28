@@ -113,7 +113,8 @@ if __name__ == "__main__":
         if target_repo != -1:
             print("You wish to add the following topics to: ", target_repo)
             print(topics)
-            
+            print(f"repo_dict: {repo_dict}")
+            print(f"target_repo: {target_repo}")
             existing_topics = repo_dict[target_repo][1]  # returns existing topics
             
             repo_owner = repo_dict[target_repo][0]
