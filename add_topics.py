@@ -119,9 +119,11 @@ if __name__ == "__main__":
             
             repo_owner = repo_dict[target_repo][0]
             add_topics_resp = add_topics(target_repo, topics, existing_topics, repo_owner)
-            print("Attempted adding topics, resp code: ")
-            print(add_topics_resp)
-            
+            if add_topics_resp != 200:
+                
+                print("Attempted adding topics, resp code: ")
+                print(add_topics_resp)
+                print(add_topics_resp.json())
             topics_resp = test_obtained(target_repo)
             if topics_resp.status_code == 200:
                 print("Topics after being added: ")
