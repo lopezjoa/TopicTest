@@ -39,7 +39,7 @@ jobs:
           JL_PAT: ${{ secrets.JL_PAT}}
         run: |
           git status
-          python add_topics.py [myRepo, AAA, BBB] [otherRepo, CCC] [anotherRepo, DDD] [fail_example_repo, ]
+          python add_topics.py [myRepo, aaa, bbb] [otherRepo, ccc] [anotherRepo, ddd] [fail_example_repo, ]
           git add .
           git commit -m "Topics added"
           git push
