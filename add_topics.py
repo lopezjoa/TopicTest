@@ -61,10 +61,8 @@ def get_repo_and_topics_from_args(repos_dict):
     print("printing arg after split", args_list)
     repo_dict = {}  # where we store repos and their topics
     for i in args_list:
-        print("i ", i)
         i_list = i.split(",")  # split string into list by ,
         i_list = [element.strip() for element in i_list]  # strip spaces
-        print("i list: ", i_list)
         repo_key = i_list.pop(0)  # store the first value of i_list
         print("Repo Name: " + repo_key)
         repo_dict[repo_key] = []
@@ -72,7 +70,6 @@ def get_repo_and_topics_from_args(repos_dict):
             for topic in i_list:
                 if topic:  # check if the topic is not empty
                     repo_dict[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
-                    print("Topics: ", repo_dict[repo_key])
                 else:
                     print("Error: At least one topic must be provided.")
                     sys.exit(1)
