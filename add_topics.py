@@ -54,6 +54,9 @@ def get_repo_and_topics_from_args(repos_dict):
         sys.exit(1)
 
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
+    if bool (re.search(r"\[(\w+)\]", args) == False
+		print("items are not within brackets")
+        sys.exit(1)
     print("printing arg after join", arg)
     arg = arg.replace("[", "")  # remove ( from string
     args_list = arg.split("]")  # use ) as a delimiter for each repository
@@ -62,12 +65,19 @@ def get_repo_and_topics_from_args(repos_dict):
     repo_dict = {}  # where we store repos and their topics
     for i in args_list:
         i_list = i.split(",")  # split string into list by ,
+        for item in i_list:
+    		if " " in item:
+    			print("items are not being separated by , ")
+                sys.exit(1)
         i_list = [element.strip() for element in i_list]  # strip spaces
         repo_key = i_list.pop(0)  # store the first value of i_list
         print("Repo Name: " + repo_key)
         repo_dict[repo_key] = []
         if repo_key in repos_dict:  # check if repo_key exists as a key in repos_dict
             for topic in i_list:
+                if bool (re.search("[a-z]", args) == False:
+		            print("items must be in all lowercase")
+                    sys.exit(1)
                 if topic:  # check if the topic is not empty
                     repo_dict[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
                 else:
