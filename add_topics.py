@@ -54,7 +54,8 @@ def get_repo_and_topics_from_args(repos_dict):
         sys.exit(1)
 
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
-    if bool(re.search(r"\[(\w+)\]", args) == False:
+	brackets = bool(re.search(r"\[(\w+)\]", args)
+    if brackets == False:
 	print("items are not within brackets")
         sys.exit(1)
     print("printing arg after join", arg)
