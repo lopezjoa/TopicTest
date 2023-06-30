@@ -4,6 +4,7 @@ This section includes one python file that adds new topics to repositories with 
 - **add_topics.py**:
   - reads data from [cloud_data.json](https://github.com/lopezjoa/TopicTest/blob/main/cloud_data.json) to validate that user input repositories do exist
   - Runs within [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml)
+  - Classifies existing repositories with new topics
  
 ## add_topics.py
 
@@ -12,9 +13,11 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
 
 ### Inputs:
 -Uses a repository secret to be able to access GitHub Cloud data:
-  - **JL_PAT**: Personal Access Token (PAT)
-- grabs input from [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) line 42 in the following format:
-  [Exisisting_Repo, New_Topic]
+- **JL_PAT**: Personal Access Token (PAT)
+- Executes python script with command input from [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) line 42
+- Please edit input with the currect format: [Existing_Repo, New_Topic, New_Topic2] [Existing_Repo2, New_Topic]
+- topics should only contain lowercase letters
+  
 ### Logic:
   1. looks within [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) to grab repository names and exisisting topics
   2. Loops through input to validate entered Repos and adds new Topics with Repo contained inside brackets
