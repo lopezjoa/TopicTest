@@ -138,7 +138,7 @@ if __name__ == "__main__":
             else:
                 print("unable to add an empty topic")
             existing_topics = existing_repo_dict[target_repo][1]  # returns existing topics
-            repo_owner = repo_dict[target_repo][0]
+            repo_owner = existing_repo_dict[target_repo][0]
             add_topics_resp = add_topics(target_repo, topics, existing_topics, repo_owner)
             if add_topics_resp != 200:
                 
