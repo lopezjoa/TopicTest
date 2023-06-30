@@ -71,7 +71,7 @@ def get_repo_and_topics_from_args(repos_dict):
         sys.exit(1)
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
     bracket_only = bool(re.search(r"[({})]", arg))
-    if bracket_only == False:
+    if bracket_only == True:
         print("Please only use bracket")
         sys.exit(1)
     check_str(args)
