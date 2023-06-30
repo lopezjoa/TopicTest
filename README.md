@@ -17,13 +17,14 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
 - Executes python script with command input from [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) line 42
 - Please edit input with the currect format: [Existing_Repo, New_Topic, New_Topic2] [Existing_Repo2, New_Topic]
 - topics should only contain lowercase letters in order to receive a 200 response code
+- Empty Topics will be invalidated
   
 ### Logic:
   1. looks within [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) to grab repository names and exisisting topics
-  2. Loops through input to validate entered Repos and adds new Topics with Repo contained inside brackets
+  2. Loops through input to validate entered Repos and adds new topics to a new dictionary with the Repos as a primary key 
   3. Repos and New topics are put into a dictionary where they are passed into a loop in attempt to commit to Github
-  4. Inside the loop each Repositories' new topics are appended to the existing topics
-  5. The python script will then attempt to push the new topic list to the requested Github repositories and return a response code 
+  4. Inside the loop each Repositories' new topics are appended to the existing topics and are 
+  5. The python script will then attempt to push the new topic list to the requested Github repositories and return a response code
 ### Output
   - input will be validated with a response code 200 and pushed or will provide an error code
   - The validated Github repositories will now be classified with the new topics
