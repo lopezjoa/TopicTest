@@ -55,7 +55,7 @@ def get_repo_and_topics_from_args(repos_dict):
 
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
     print("printing arg after join", arg)
-    arg = arg.replace("[", "")  # remove ( from string
+    arg = arg.replace("[","")  # remove ( from string
     args_list = arg.split("]")  # use ) as a delimiter for each repository
     args_list = [element.strip() for element in args_list if element.strip()]  # strip spaces and filter any empty strings
     print("printing arg after split", args_list)
