@@ -71,8 +71,11 @@ def get_repo_and_topics_from_args(repos_dict):
     if len(repos_dict) < 2:
         print("Usage: add_topics.py (<repo_name>, <topic1>, <topic2>, ...")  # Changing the format to have parenthesis and commas
         sys.exit(1)
-	    
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
+	bracket_only = bool(re.search(r"[({})]", args))
+	if bracket_only == False:
+		print("Please only use bracket")
+		sys.exit(1)
     check_str(args)
     print("printing arg after join", arg)
     arg = arg.replace("[", "")  # remove ( from string
