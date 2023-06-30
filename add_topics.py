@@ -74,8 +74,7 @@ def get_repo_and_topics_from_args(repos_dict):
     if bracket_only == True:
         print("Please only use bracket")
         sys.exit(1)
-    check_str(args)
-    print("printing arg after join", arg)
+    check_str(arg)
     arg = arg.replace("[", "")  # remove ( from string
     args_list = arg.split("]")  # use ) as a delimiter for each repository
     args_list = [element.strip() for element in args_list if element.strip()]  # strip spaces and filter any empty strings
