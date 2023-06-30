@@ -102,7 +102,7 @@ def get_repo_and_topics_from_args(repos_dict):
                     print("Error: At least one topic must be provided.")
                     sys.exit(1)
         else:
-            print("Repo doesn't exist")
+            print("Repo doesn't exist", repo_key)
             sys.exit(1)
     return repo_dict
 
