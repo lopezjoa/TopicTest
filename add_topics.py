@@ -70,7 +70,7 @@ def get_repo_and_topics_from_args(repos_dict):
         print("Usage: add_topics.py (<repo_name>, <topic1>, <topic2>, ...")  # Changing the format to have parenthesis and commas
         sys.exit(1)
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
-    bracket_only = bool(re.search(r"[({})]", args))
+    bracket_only = bool(re.search(r"[({})]", arg))
     if bracket_only == False:
         print("Please only use bracket")
         sys.exit(1)
@@ -93,8 +93,8 @@ def get_repo_and_topics_from_args(repos_dict):
         repo_dict[repo_key] = []
         if repo_key in repos_dict:  # check if repo_key exists as a key in repos_dict
             for topic in i_list:
-                if bool(re.search("[a-z]", args)) == False:
-                    print("items must be in all lowercase")
+                if bool(re.search("[a-z]", topic)) == False:
+                    print("Topics must be in all lowercase")
                     sys.exit(1)
                 if topic:  # check if the topic is not empty
                     repo_dict[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
