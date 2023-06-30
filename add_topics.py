@@ -81,7 +81,7 @@ def get_repo_and_topics_from_args(repos_dict):
     print("printing arg after split", args_list)
     repo_dict = {}  # where we store repos and their topics
     for i in args_list:
-        i = [element.strip() for element in i  # strip spaces
+        i = [element.strip() for element in i]  # strip spaces
         i_list = i.split(",")  # split string into list by ,
         for item in i_list:
             if " " in item:
