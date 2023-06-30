@@ -102,7 +102,8 @@ def get_repo_and_topics_from_args(repos_dict):
                     print("Error: At least one topic must be provided.")
                     sys.exit(1)
         else:
-            return repo_dict
+            print("Repo doesn't exist")
+            sys.exit(1)
     return repo_dict
 
 def add_topics(repo, new_topics, existing_topics, repo_owner):
