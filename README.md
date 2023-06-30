@@ -3,7 +3,7 @@ This section includes one python file that adds new topics to repositories with 
 
 - **add_topics.py**:
   - reads data from [cloud_data.json](https://github.com/lopezjoa/TopicTest/blob/main/cloud_data.json) to validate that user input repositories do exist
-  - Runs within [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml)
+  - Script is ran in [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) through Github Actions
   - Classifies existing repositories with new topics
  
 ## add_topics.py
