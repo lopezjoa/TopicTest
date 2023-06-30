@@ -95,7 +95,6 @@ def get_repo_and_topics_from_args(repos_dict):
                         repo_dict[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
                 else:
                     print("Error: At least one topic must be provided.")
-                    sys.exit(1)
         else:
             return repo_dict
     return repo_dict
