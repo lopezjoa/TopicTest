@@ -16,7 +16,7 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
 - **JL_PAT**: Personal Access Token (PAT)
 - Executes python script with command input from [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) line 42
 - Please edit input with the currect format: [Existing_Repo, New_Topic, New_Topic2] [Existing_Repo2, New_Topic]
-- topics should only contain lowercase letters
+- topics should only contain lowercase letters in order to receive a 200 response code
   
 ### Logic:
   1. looks within [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) to grab repository names and exisisting topics
@@ -25,5 +25,5 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
   4. Inside the loop each Repositories' new topics are appended to the existing topics
   5. The python script will then attempt to push the new topic list to the requested Github repositories and return a response code 
 ### Output
-  - input will be validated with a response code 200 or will provide an error code
+  - input will be validated with a response code 200 and pushed or will provide an error code
   - The validated Github repositories will now be classified with the new topics
