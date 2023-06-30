@@ -95,7 +95,7 @@ def get_repo_and_topics_from_args(repos_dict):
 
 def add_topics(repo, new_topics, existing_topics, repo_owner):
     existing_topics = set(existing_topics) # changing to set to avoid duplicates
-    if new_topics: #if topic list isn't empty
+    if new_topics and "" in new_topics: #if topic list isn't empty
         for topic in new_topics:
                 if bool(re.search("[a-z]", topic)) == False: # check if topics only contain lowercase letters
                         print("Topics must be in all lowercase")
