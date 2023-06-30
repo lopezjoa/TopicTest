@@ -48,24 +48,23 @@ def get_user_input(repos_dict):
          # entered invalid repo name
          return -1, -1
 def check_str(myStr):
-	open = "["
-	close = "]"
-	stack = []
-	for i in myStr:   # check each character in the string for a [ or a ]
-		if i == open: 
-			stack.append(i) # if character equals [ add to stack list
+    open = "["
+    close = "]"
+    stack = []
+    for i in myStr:   # check each character in the string for a [ or a ]
+        if i == open: 
+            stack.append(i) # if character equals [ add to stack list
         elif i == close:    # check previous character for [
-    		if ((len(stack) > 0) and (open == stack[len(stack)-1])):
-            	stack.pop() # remove characters from stack list
-			else: # if unable to find [ in stack list then brackets are not contained
-				print("Items are not contained within the brackets")
-				sys.exit(1)
+            if len(stack) > 0 and open == stack[len(stack)-1]:
+                stack.pop() # remove characters from stack list
+            else: # if unable to find [ in stack list then brackets are not contained
+                print("Items are not contained within the brackets")
+                sys.exit(1)
     if len(stack) == 0:
         return 
     else: # if [ is still in list then items are not contained
-		print("Items are not contained within the brackets")
-		sys.exit(1)
-	    
+        print("Items are not contained within the brackets")
+        sys.exit(1)	    
 def get_repo_and_topics_from_args(repos_dict):
     if len(repos_dict) < 2:
         print("Usage: add_topics.py (<repo_name>, <topic1>, <topic2>, ...")  # Changing the format to have parenthesis and commas
