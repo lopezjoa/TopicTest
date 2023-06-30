@@ -47,17 +47,33 @@ def get_user_input(repos_dict):
      else:
          # entered invalid repo name
          return -1, -1
-
+def check_str(myStr):
+    open = "["
+    close = "]"
+    stack = []
+    for i in myStr:
+        if i == open:
+            stack.append(i)
+        elif i == close:
+            if ((len(stack) > 0) and
+                (open == stack[len(stack)-1])):
+                stack.pop()
+            else:
+		print("Items are not contained within the brackets")
+                sys.exit(1)
+    if len(stack) == 0:
+        return "Balanced"
+    else:
+	print("Items are not contained within the brackets")
+	sys.exit(1)
+	    
 def get_repo_and_topics_from_args(repos_dict):
     if len(repos_dict) < 2:
         print("Usage: add_topics.py (<repo_name>, <topic1>, <topic2>, ...")  # Changing the format to have parenthesis and commas
         sys.exit(1)
-
+	    
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
-	brackets = bool(re.search(r"\[(\w+)\]", args)
-    if brackets == False:
-	print("items are not within brackets")
-        sys.exit(1)
+    check_str(args)
     print("printing arg after join", arg)
     arg = arg.replace("[", "")  # remove ( from string
     args_list = arg.split("]")  # use ) as a delimiter for each repository
