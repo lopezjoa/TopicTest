@@ -48,16 +48,16 @@ def get_user_input(repos_dict):
          # entered invalid repo name
          return -1, -1
 def check_str(myStr):
-    open = "["
-    close = "]"
-    stack = []
-    for i in myStr:   # check each character in the string for a [ or a ]
-        if i == open: 
-            stack.append(i) # if character equals [ add to stack list
-        elif i == close: # if character == ] check previous character for [
-            if ((len(stack) > 0) and (open == stack[len(stack)-1])):
-                stack.pop() # remove characters from stack list
-            else: # if unable to find [ in stack list then brackets are not contained
+	open = "["
+	close = "]"
+	stack = []
+	for i in myStr:   # check each character in the string for a [ or a ]
+		if i == open: 
+			stack.append(i) # if character equals [ add to stack list
+        elif i == close: # if character == ] :check previous character for [
+        	if ((len(stack) > 0) and (open == stack[len(stack)-1])):
+            	stack.pop() # remove characters from stack list
+        	else: # if unable to find [ in stack list then brackets are not contained
 				print("Items are not contained within the brackets")
 				sys.exit(1)
     if len(stack) == 0:
