@@ -110,7 +110,8 @@ def add_topics(repo, new_topics, existing_topics, repo_owner):
     for topic in new_topics:
         if topic: #if topic isn't empty
             existing_topics.add(topic)
-
+        else:
+            print("unable to add an empty topic")
     existing_topics = list(existing_topics) # converting set back into a list
     if len(existing_topics) > 0:
         data = {
