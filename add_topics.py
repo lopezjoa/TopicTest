@@ -81,7 +81,8 @@ def get_repo_and_topics_from_args(repos_dict):
     print("printing arg after split", args_list)
     repo_dict = {}  # where we store repos and their topics
     for i in args_list:
-        i_list = i.split(", ")  # split string into list by ,
+        i = [element.strip() for element in i  # strip spaces
+        i_list = i.split(",")  # split string into list by ,
         for item in i_list:
             if " " in item:
                 print(item)
@@ -102,8 +103,7 @@ def get_repo_and_topics_from_args(repos_dict):
                     print("Error: At least one topic must be provided.")
                     sys.exit(1)
         else:
-            print("Repo doesn't exist", repo_key)
-            sys.exit(1)
+            return repo_dict
     return repo_dict
 
 def add_topics(repo, new_topics, existing_topics, repo_owner):
@@ -161,7 +161,6 @@ if __name__ == "__main__":
                 print("Error code: ", topics_resp)
         else:
             print("Repo could not be found.")
-        print(repo_dict)
     
         
     # while True:
