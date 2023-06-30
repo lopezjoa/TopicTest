@@ -70,7 +70,7 @@ def get_repo_and_topics_from_args(repos_dict):
         print("Usage: add_topics.py (<repo_name>, <topic1>, <topic2>, ...")  # Changing the format to have parenthesis and commas
         sys.exit(1)
     arg = " ".join(sys.argv[1:])  # put everything after add_topics.py into a string
-    bracket_only = bool(re.search(r"[({})]", arg))
+    bracket_only = bool(re.search(r"[({})]", arg)) # verifying that only brackets are being used
     if bracket_only == True:
         print("Please only use bracket")
         sys.exit(1)
@@ -88,22 +88,20 @@ def get_repo_and_topics_from_args(repos_dict):
         repo_dict[repo_key] = []
         if repo_key in repos_dict:  # check if repo_key exists as a key in repos_dict
             for topic in i_list:
-                if topic:  # check if the topic is not empty
-                    if bool(re.search("[a-z]", topic)) == False:
-                        print("Topics must be in all lowercase")
-                        sys.exit(1)
-                        repo_dict[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
-                else:
-                    print("Error: At least one topic must be provided.")
+                    repo_dict[repo_key].append(topic) # add topics to repo name dictionary if it's in repo dictionary
         else:
-            return repo_dict
+            print("repo doesn't exist")
     return repo_dict
 
 def add_topics(repo, new_topics, existing_topics, repo_owner):
     existing_topics = set(existing_topics) # changing to set to avoid duplicates
     if new_topics: #if topic list isn't empty
         for topic in new_topics:
-                existing_topics.add(topic)
+                if bool(re.search("[a-z]", topic)) == False: # check if topics only contain lowercase letters
+                        print("Topics must be in all lowercase")
+                        sys.exit(1)
+                else:
+                    existing_topics.add(topic)
     else:
         print("unable to add an empty topic")
         sys.exit(1)
