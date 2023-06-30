@@ -139,7 +139,6 @@ if __name__ == "__main__":
                 
                 print("Attempted adding topics, resp code: ")
                 print(add_topics_resp)
-                print(add_topics_resp.json())
             topics_resp = test_obtained(target_repo)
             if topics_resp.status_code == 200:
                 print("Topics after being added: ")
