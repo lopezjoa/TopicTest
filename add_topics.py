@@ -108,7 +108,8 @@ def get_repo_and_topics_from_args(repos_dict):
 def add_topics(repo, new_topics, existing_topics, repo_owner):
     existing_topics = set(existing_topics) # changing to set to avoid duplicates
     for topic in new_topics:
-        existing_topics.add(topic)
+        if topic: #if topic isn't empty
+            existing_topics.add(topic)
 
     existing_topics = list(existing_topics) # converting set back into a list
     if len(existing_topics) > 0:
