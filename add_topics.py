@@ -106,6 +106,7 @@ def add_topics(repo, new_topics, existing_topics, repo_owner):
                 existing_topics.add(topic)
     else:
         print("unable to add an empty topic")
+        sys.exit(1)
     existing_topics = list(existing_topics) # converting set back into a list
     if len(existing_topics) > 0:
         data = {
@@ -133,10 +134,6 @@ if __name__ == "__main__":
         if target_repo != -1:
             print("You wish to add the following topics to: ", target_repo)
             print(topics)
-            if topics: #if topic list isn't empty
-                print("adding topic...")
-            else:
-                print("unable to add an empty topic")
             existing_topics = existing_repo_dict[target_repo][1]  # returns existing topics
             repo_owner = existing_repo_dict[target_repo][0]
             add_topics_resp = add_topics(target_repo, topics, existing_topics, repo_owner)
