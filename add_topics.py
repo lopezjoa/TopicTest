@@ -84,6 +84,7 @@ def get_repo_and_topics_from_args(repos_dict):
         i_list = i.split(",")  # split string into list by ,
         for item in i_list:
             if " " in item:
+                print(item)
                 print("items are not being separated by , ")
                 sys.exit(1)
         i_list = [element.strip() for element in i_list]  # strip spaces
