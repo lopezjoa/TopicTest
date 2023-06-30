@@ -18,7 +18,7 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
 ### Logic:
   1. looks within [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) to grab repository names and exisisting topics
   2. Loops through input to validate entered Repos and adds new Topics with Repo contained inside brackets
-    -Repos and New topics are put into a dictionary where they are passed into a loop in attempt to push 
+  3. Repos and New topics are put into a dictionary where they are passed into a loop in attempt to push 
   4. The new topics are then appended to the existing topics that are associated with the defined repository
   5. The python script will then attempt to add topics to the requested Github repositories and return a response code 
 ### Output
