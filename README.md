@@ -21,13 +21,13 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
   - File should hold information about the repositories.
 
 ### Bad Inputs:
- - Using command-line arguments that do not follow the specified format will result in an error.
- - Providing an empty string or a string with spaces as a topic.
- - Providing a topic with uppercase letters.
+ - Using command-line arguments that do not follow the specified format will result in an error. 
+ - Providing an empty string or a string with spaces as a topic. `[Existing_Repo, , new_topic2] [existing_Repo2, new topic]`
+ - Providing a topic with uppercase letters. `[Existing_Repo, NEW_Topic, New_Topic2]`
  - Running the script without providing a personal access token.
- - Using brackets other than square brackets for command-line arguments.
- - Using special characters in topics.
- - Using non-existing repository names.
+ - Using brackets other than square brackets for command-line arguments. `(Existing_Repo, new_topic, new_topic2) `
+ - Using special characters in topics. `[Existing_Repo, new_topic!, new_topic##]`
+ - Using non-existing repository names. 
 
 
 ### Logic:
