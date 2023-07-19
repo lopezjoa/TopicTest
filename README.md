@@ -1,8 +1,8 @@
 # Overview:
-This repository includes a Python script titled [add_topics.py](https://github.com/lopezjoa/TopicTest/blob/test-safety-controls/add_topics.py) that takes input from the user to add new topics to specific Github repositories. This script reads data from a .Json file called [cloud_data.json](https://github.com/lopezjoa/TopicTest/blob/main/cloud_data.json), which holds information about about existing repositories and modifies the topics of these repositories. The script can be run through Github Actions with the [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) file or in a terminal using command-line arguments. 
+This repository includes a Python script titled [add_topics.py](https://github.com/lopezjoa/TopicTest/blob/test-safety-controls/add_topics.py) that takes input from the user to add new topics to specific GitHub repositories. This script reads data from a .Json file called [cloud_data.json](https://github.com/lopezjoa/TopicTest/blob/main/cloud_data.json), which holds information about about existing repositories and modifies the topics of these repositories. The script can be run through GitHub Actions with the [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) file or in a terminal using command-line arguments. 
 - **add_topics.py**:
   - Reads data from [cloud_data.json](https://github.com/lopezjoa/TopicTest/blob/main/cloud_data.json) to validate that user input repositories do exist.
-  - Script is ran in [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) through Github Actions.
+  - Script is run in [main.yaml](https://github.com/lopezjoa/TopicTest/blob/main/.github/workflows/main.yml) through GitHub Actions.
   - Uses GitHub commit to add new topics to the specified repositories
  
 ## add_topics.py
