@@ -43,28 +43,47 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
   - If the script was successful, the GitHub repositories will now have the new topics updated.
 
 ## Setup and Usage
-This sectuon details how to set up the python script and Github Acxtion in your own repository, and how to run the script either through the Github Actions or through your own terminal or IDE. 
+This section details how to set up the python script and the GitHub Action file in your own repository, and how to run the script either through the Github Actions or through your own terminal or IDE. 
 ### Setup
 **Github Action**
 1. Create a new .Yaml file under your repository under ".github/workflows". For our example, This repo's file name is is called "main.yaml".
-2. Inside 'main.yaml' you will need these snippets of code inside `jobs:`
+2. Inside "main.yaml" you will need to add this code
 ```yaml
- steps:
-      # checks out the repo content to GitHub runner
-      - name: checkout repo content
-        uses: actions/checkout@v3
-      - name: setup python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.8.1" # install python version needed
-      - name: install python packages 
-        run: | # These Dependencies need do be installed for python file to work 
-          python -m pip install --upgrade pip --user
-          python -m pip install pandas --user
-          python -m pip install requests --user
-          python -m pip install regex --user
-      - name: Git Config User
-        run: |
-          git config --global user.email "lopezjoa@iu.edu" # replace email with repo owner's email 
-          git config --global user.name "lopezjoa" # replace with repo owner's username
+Jobs:
+   steps:
+        # checks out the repo content to GitHub runner
+        - name: checkout repo content
+          uses: actions/checkout@v3
+        - name: setup python
+          uses: actions/setup-python@v4
+          with:
+            python-version: "3.8.1" # install python version needed
+        - name: install python packages 
+          run: | # These Dependencies need do be installed for python file to work 
+            python -m pip install --upgrade pip --user
+            python -m pip install pandas --user
+            python -m pip install requests --user
+            python -m pip install regex --user
+        - name: Git Config User
+          run: |
+            git config --global user.email "lopezjoa@iu.edu" # replace email with repo owner's email 
+            git config --global user.name "lopezjoa" # replace with repo owner's username
 ```
+3.) Once your .Yaml file is configured, commit the changes to your main branch
+### Running the script 
+**GitHub Action**
+- Once you have setup your .Yaml file, you can run your script through the Actions tab in Github. Inside the tab click on your repository on the leftside menu and then click run workflow. GitHub will run your script in the main branch and you can view the progress and results within the Action tab.
+
+**Terminal or IDE**
+- To run the script locally from your terminal or IDE you will need to ensure you're in the right directory.
+1. Make sure you have Python installed and the proper dependencies with: 
+```yaml
+pip install pandas
+pip install requests
+pip install regex
+```
+2. Run the script with command-line arguments specifying the repositories and topics in the following format: 
+```
+python add_topics.py [Existing_Repo, new_topic, new_topic2] [existing_Repo2, new_topic]
+```
+  Remember to replace `Existing_Repo` with your repository names and replace `new_topic` with your topic names.
