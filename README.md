@@ -41,3 +41,30 @@ Pulls information stored in [cloud_data.json](https://github.com/lopezjoa/TopicT
 ### Output
   - The script will either add the new topics to each repository successfullly, or it will terminate with an error code.
   - If the script was successful, the GitHub repositories will now have the new topics updated.
+
+## Setup and Usage
+This sectuon details how to set up the python script and Github Acxtion in your own repository, and how to run the script either through the Github Actions or through your own terminal or IDE. 
+### Setup
+**Github Action**
+1. Create a new .Yaml file under your repository under ".github/workflows". For our example, This repo's file name is is called "main.yaml".
+2. Inside 'main.yaml' you will need these snippets of code inside `jobs:`
+```yaml
+ steps:
+      # checks out the repo content to GitHub runner
+      - name: checkout repo content
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8.1" # install python version needed
+      - name: install python packages 
+        run: | # These Dependencies need do be installed for python file to work 
+          python -m pip install --upgrade pip --user
+          python -m pip install pandas --user
+          python -m pip install requests --user
+          python -m pip install regex --user
+      - name: Git Config User
+        run: |
+          git config --global user.email "lopezjoa@iu.edu" # replace email with repo owner's email 
+          git config --global user.name "lopezjoa" # replace with repo owner's username
+```
